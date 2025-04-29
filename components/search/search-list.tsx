@@ -3,15 +3,6 @@ import VideoCard from "../video-card";
 import doodstream from "@/lib/doodstream";
 import type { Metadata } from "next";
 import { SITENAME } from "@/lib/constants";
-
-const SearchCardList = async ({
-    query,
-    banner,
-}: {
-    query: string;
-    banner?: boolean;
-}) => {
-    const data = await doodstream.search({ query });
 export const metadata: Metadata = {
     title: `{query}`,
     description: `{query} ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma korea china tante live paksa ngentot abg cewek pelajar.`,
@@ -26,6 +17,15 @@ export const metadata: Metadata = {
         type: `website`,
     },
 };
+
+const SearchCardList = async ({
+    query,
+    banner,
+}: {
+    query: string;
+    banner?: boolean;
+}) => {
+    const data = await doodstream.search({ query });
 
     return (
         <div className="flex flex-col">
