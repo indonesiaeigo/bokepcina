@@ -1,6 +1,8 @@
 import MessageBox from "../message-box";
 import VideoCard from "../video-card";
 import doodstream from "@/lib/doodstream";
+import type { Metadata } from "next";
+import { SITENAME } from "@/lib/constants";
 
 const SearchCardList = async ({
     query,
@@ -10,6 +12,20 @@ const SearchCardList = async ({
     banner?: boolean;
 }) => {
     const data = await doodstream.search({ query });
+export const metadata: Metadata = {
+    title: `{query}`,
+    description: `{query} ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma korea china tante live paksa ngentot abg cewek pelajar.`,
+    metadataBase: new URL("https://bokepcina.pages.dev"),
+    alternates: {
+        canonical: `/?q={query}`,
+    },
+    openGraph: {
+        title: `{query}`,
+        description: `{query} ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma korea china tante live paksa ngentot abg cewek pelajar.`,
+        url: `/?q={query}`,
+        type: `website`,
+    },
+};
 
     return (
         <div className="flex flex-col">
